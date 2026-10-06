@@ -10,6 +10,7 @@
   "checksumsUrl": "https://github.com/rapidshyft/TryGradeX/releases/download/v0.0.0/SHA256SUMS.txt",
   "android": {
     "applicationId": "com.rapidshyft.gradex",
+    "minSdk": 28,
     "artifacts": {
       "universal": {
         "name": "gradex-0.0.0-universal.apk",

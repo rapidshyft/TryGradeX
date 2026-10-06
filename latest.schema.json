@@ -17,10 +17,11 @@
     "notes": { "type": "string", "description": "Short plain-text summary of the release." },
     "android": {
       "type": "object",
-      "required": ["applicationId", "artifacts"],
+      "required": ["applicationId", "minSdk", "artifacts"],
       "additionalProperties": false,
       "properties": {
         "applicationId": { "type": "string" },
+        "minSdk": { "type": "integer", "description": "Minimum Android API level. 28 = Android 9." },
         "artifacts": {
           "type": "object",
           "required": ["universal", "arm64-v8a", "armeabi-v7a", "x86_64"],

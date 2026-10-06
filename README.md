@@ -24,6 +24,10 @@ Each release ships a universal APK and one smaller APK per CPU architecture.
 
 Not sure about your phone? Install the universal APK.
 
+## Requirements
+
+- Android 9 (API 28) or newer
+
 ## Install
 
 1. Download the APK you need from the latest release.
