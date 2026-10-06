@@ -67,4 +67,6 @@ See [CHANGELOG.md](CHANGELOG.md) or the notes on each release.
 
 ## Legal
 
-GradeX is proprietary software. All rights reserved. The APKs in this repository are provided for installation and personal use only. Redistribution, modification and reverse engineering are not permitted without written permission. Privacy policy and terms: [trygradex.app](https://trygradex.app).
+GradeX is proprietary software. Copyright (c) 2026 Lwazilwenkosi Ncube, trading as Rapidshyft. All rights reserved. The APKs in this repository are provided for installation and personal use only under the [GradeX End User License Agreement](LICENSE). Redistribution, modification and reverse engineering are not permitted without written permission. Privacy policy and terms: [trygradex.app](https://trygradex.app).
+
+Contact: lwazincubex@trygradex.app
