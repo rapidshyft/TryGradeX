@@ -13,14 +13,14 @@ Get the latest build from the [Releases page](https://github.com/rapidshyft/TryG
 
 ### Which APK do I need?
 
-Each release ships a universal APK and one smaller APK per CPU architecture.
+Each release ships a universal APK and one smaller APK per CPU architecture. The version is the release's tag (for example `v1.0.12`), not part of the file name, so the same links always give you the newest build.
 
 | File | Use it when |
 | --- | --- |
-| `gradex-<version>-universal.apk` | You are not sure. Works on every supported device, but is the largest file. |
-| `gradex-<version>-arm64-v8a.apk` | Almost all phones made since about 2017 (64-bit ARM). **Best choice for most people.** |
-| `gradex-<version>-armeabi-v7a.apk` | Older or low-end phones (32-bit ARM). |
-| `gradex-<version>-x86_64.apk` | Emulators and Chromebooks, and a few rare x86 tablets. |
+| `app-release.apk` | You are not sure. Works on every supported device, but is the largest file. |
+| `app-arm64-v8a-release.apk` | Almost all phones made since about 2017 (64-bit ARM). **Best choice for most people.** |
+| `app-armeabi-v7a-release.apk` | Older or low-end phones (32-bit ARM). |
+| `app-x86_64-release.apk` | Emulators and Chromebooks, and a few rare x86 tablets. |
 
 Not sure about your phone? Install the universal APK.
 
@@ -39,12 +39,12 @@ Not sure about your phone? Install the universal APK.
 Every release includes `SHA256SUMS.txt`. Compare the checksum of your download against it:
 
 ```bash
-sha256sum gradex-<version>-arm64-v8a.apk
+sha256sum app-arm64-v8a-release.apk
 # or, to check everything you downloaded at once:
 sha256sum -c SHA256SUMS.txt --ignore-missing
 ```
 
-On Windows PowerShell: `Get-FileHash .\gradex-<version>-arm64-v8a.apk -Algorithm SHA256`
+On Windows PowerShell: `Get-FileHash .\app-arm64-v8a-release.apk -Algorithm SHA256`
 
 If the checksum doesn't match, delete the file and download it again from this repository. Only install GradeX from this repository or trygradex.app.
 

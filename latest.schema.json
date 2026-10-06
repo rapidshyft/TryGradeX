@@ -3,34 +3,96 @@
   "$id": "https://raw.githubusercontent.com/rapidshyft/TryGradeX/main/latest.schema.json",
   "title": "GradeX latest release manifest",
   "type": "object",
-  "required": ["channel", "version", "buildNumber", "releasedAt", "minSupportedBuild", "releaseUrl", "checksumsUrl", "android"],
+  "required": [
+    "channel",
+    "version",
+    "buildNumber",
+    "releasedAt",
+    "minSupportedBuild",
+    "releaseUrl",
+    "checksumsUrl",
+    "android"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "channel": { "enum": ["stable"], "description": "Only stable releases are written to latest.json." },
-    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "description": "Semantic version without the leading v. Matches the version name in pubspec.yaml." },
-    "buildNumber": { "type": "integer", "minimum": 0, "description": "Android versionCode. Matches the number after + in pubspec.yaml." },
-    "releasedAt": { "type": "string", "format": "date-time" },
-    "minSupportedBuild": { "type": "integer", "minimum": 0, "description": "Builds below this should show a forced-update prompt." },
-    "releaseUrl": { "type": "string", "format": "uri" },
-    "checksumsUrl": { "type": "string", "format": "uri" },
-    "notes": { "type": "string", "description": "Short plain-text summary of the release." },
+    "$schema": {
+      "type": "string"
+    },
+    "channel": {
+      "enum": [
+        "stable"
+      ],
+      "description": "Only stable releases are written to latest.json."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version without the leading v. Matches the version name in pubspec.yaml."
+    },
+    "buildNumber": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Android versionCode. Matches the number after + in pubspec.yaml."
+    },
+    "releasedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "minSupportedBuild": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Builds below this should show a forced-update prompt."
+    },
+    "releaseUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "checksumsUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Short plain-text summary of the release."
+    },
     "android": {
       "type": "object",
-      "required": ["applicationId", "minSdk", "artifacts"],
+      "required": [
+        "applicationId",
+        "minSdk",
+        "artifacts"
+      ],
       "additionalProperties": false,
       "properties": {
-        "applicationId": { "type": "string" },
-        "minSdk": { "type": "integer", "description": "Minimum Android API level. 28 = Android 9." },
+        "applicationId": {
+          "type": "string"
+        },
+        "minSdk": {
+          "type": "integer",
+          "description": "Minimum Android API level. 28 = Android 9."
+        },
         "artifacts": {
           "type": "object",
-          "required": ["universal", "arm64-v8a", "armeabi-v7a", "x86_64"],
+          "required": [
+            "universal",
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86_64"
+          ],
           "additionalProperties": false,
           "properties": {
-            "universal": { "$ref": "#/$defs/artifact" },
-            "arm64-v8a": { "$ref": "#/$defs/artifact" },
-            "armeabi-v7a": { "$ref": "#/$defs/artifact" },
-            "x86_64": { "$ref": "#/$defs/artifact" }
+            "universal": {
+              "$ref": "#/$defs/artifact"
+            },
+            "arm64-v8a": {
+              "$ref": "#/$defs/artifact"
+            },
+            "armeabi-v7a": {
+              "$ref": "#/$defs/artifact"
+            },
+            "x86_64": {
+              "$ref": "#/$defs/artifact"
+            }
           }
         }
       }
@@ -39,13 +101,31 @@
   "$defs": {
     "artifact": {
       "type": "object",
-      "required": ["name", "url", "sha256", "size"],
+      "required": [
+        "name",
+        "url",
+        "sha256",
+        "size"
+      ],
       "additionalProperties": false,
       "properties": {
-        "name": { "type": "string", "pattern": "^gradex-\\d+\\.\\d+\\.\\d+-(universal|arm64-v8a|armeabi-v7a|x86_64)\\.apk$" },
-        "url": { "type": "string", "format": "uri" },
-        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-        "size": { "type": "integer", "minimum": 0, "description": "Size in bytes." }
+        "name": {
+          "type": "string",
+          "pattern": "^app-(arm64-v8a-|armeabi-v7a-|x86_64-)?release\\.apk$"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Size in bytes."
+        }
       }
     }
   }
