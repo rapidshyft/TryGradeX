@@ -1,0 +1,52 @@
+name: Bug report
+description: Something in GradeX isn't working
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See error
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: GradeX version
+      description: Settings > About, e.g. 1.0.0 (1)
+    validations:
+      required: true
+  - type: dropdown
+    id: apk
+    attributes:
+      label: Which APK did you install?
+      options:
+        - universal
+        - arm64-v8a
+        - armeabi-v7a
+        - x86_64
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: Samsung Galaxy A14, Android 14
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or other details
+      description: Don't include passwords or personal information.
