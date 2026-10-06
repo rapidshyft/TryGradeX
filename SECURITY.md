@@ -4,7 +4,9 @@
 
 Please **do not** open a public issue for security problems.
 
-Report privately using GitHub's [private vulnerability reporting](https://github.com/rapidshyft/TryGradeX/security/advisories/new) on this repository.
+Report privately using either of these:
+- GitHub's [private vulnerability reporting](https://github.com/rapidshyft/TryGradeX/security/advisories/new) on this repository.
+- Email **support@trygradex.app** with "Security" in the subject line.
 
 Include:
 - What you found and where
